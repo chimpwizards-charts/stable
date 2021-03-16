@@ -48,8 +48,8 @@ spec:
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         resources:
           requests:
-            memory: "{{ .Values.core.resoruces.requests.requests.memory }}"
-            cpu: "{{ .Values.core.resoruces.requests.requests.cpu }}"
+            memory: "{{ .Values.core.resources.requests.memory }}"
+            cpu: "{{ .Values.core.resources.requests.cpu }}"
 
         imagePullPolicy: "{{ .Values.imagePullPolicy }}"
         envFrom:

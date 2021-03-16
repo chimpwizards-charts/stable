@@ -65,15 +65,15 @@ core:
   # configMap: "my-custom-configmap"
   envFrom: []
 
-  resources: {}
-  # limits:
-  #   cpu: "100m"
-  #   memory: 512Mi
+  resources: 
     requests:
       cpu: "4000m"
       memory: 8Gi
+  # limits:
+  #   cpu: "100m"
+  #   memory: 512Mi
 
-  standalone: false
+  standalone: true
   numberOfServers: 3
   persistentVolume:
     ## whether or not persistence is enabled
