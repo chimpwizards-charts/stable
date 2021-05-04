@@ -1,0 +1,50 @@
+labels:
+    io.cattle.role: project
+
+categories:
+    - cw
+    - dev
+    - ndru
+    - tools
+
+questions:
+- variable: sqlpad.password
+  description: "Server password"
+  type: password
+  required: true
+  group: "Settings" 
+
+- variable: sqlpad.startup_script
+  description: "Startup Script URL"
+  type: string
+  required: false
+  group: "Settings" 
+
+- variable: sqlpad.ingress.enabled
+  default: "sqlpad.dev.cw.com"
+  description: "URL"
+  type: string
+  required: true
+  group: "Settings" 
+  label: URL to use ro reach this service
+
+- variable: sqlpad.define.enviornment
+  default: true
+  description: "Environment Settings"
+  type: boolean
+  label: Define set of environment varibales
+  show_subquestion_if: true
+  group: "Environment Settings"
+ 
+  subquestions:
+  - variable: sqlpad.env.username
+    default: ""
+    description: "Username"
+    type: string
+    required: true
+
+  - variable: sqlpad.env.password
+    default: ""
+    description: "Password"
+    type: password
+    required: true

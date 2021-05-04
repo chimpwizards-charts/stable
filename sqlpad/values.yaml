@@ -1,0 +1,7 @@
+ide:
+  ingress:
+    enabled: true
+    hosts:
+      - ide.dev.cw.com
+    tls:
+      - secretName: dev-cw-com-wildcard-cert

@@ -1,0 +1,25 @@
+image:
+  name: sqlpad/sqlpad
+  version: latest
+  pullPolicy: IfNotPresent
+
+service:
+  name: web
+  externalPort: 3000
+  internalPort: 3000
+
+ingress:
+  enabled: true
+  hosts:
+    - cw.com
+  annotations:
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  tls:
+    # Secrets must be manually created in the namespace.
+    # - secretName: chart-example-tls
+    #   hosts:
+    #     - chart-example.local
+
+password: admin
+startup_script:
