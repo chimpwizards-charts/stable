@@ -21,5 +21,6 @@ ingress:
     #   hosts:
     #     - chart-example.local
 
-password: admin
-startup_script:
+env:
+  password: admin
+  username: admin

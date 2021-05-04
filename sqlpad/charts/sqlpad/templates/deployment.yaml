@@ -26,10 +26,10 @@ spec:
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           env: 
-            - name: PASSWORD
-              value: "{{ .Values.password }}"
-            - name: STARTUP_SCRIPT
-              value: "{{ .Values.startup_script }}"          
+            - name: SQLPAD_ADMIN
+              value: "{{ .Values.env.username }}"          
+            - name: SQLPAD_ADMIN_PASSWORD
+              value: "{{ .Values.env.password }}"       
               
       
 
