@@ -4,14 +4,14 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  name: web
+  name: sqlpad
   externalPort: 3000
   internalPort: 3000
 
 ingress:
   enabled: true
   hosts:
-    - cw.com
+    - sqlpad.cw.com
   annotations:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"

@@ -1,7 +1,11 @@
-ide:
+sqlpad:
   ingress:
     enabled: true
     hosts:
-      - ide.dev.cw.com
+      - sqlpad.dev.cw.com
     tls:
       - secretName: dev-cw-com-wildcard-cert
+
+  env:
+    password: admin
+    username: admin      
