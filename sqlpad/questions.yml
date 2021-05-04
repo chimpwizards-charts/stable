@@ -31,9 +31,11 @@ questions:
     description: "Username"
     type: string
     required: true
+    label: Username
 
   - variable: sqlpad.env.password
     default: ""
     description: "Password"
     type: password
     required: true
+    label: Password
