@@ -27,14 +27,14 @@ questions:
  
   subquestions:
   - variable: sqlpad.env.username
-    default: ""
+    default: "admin"
     description: "Username"
     type: string
     required: true
     label: Username
 
   - variable: sqlpad.env.password
-    default: ""
+    default: "admin"
     description: "Password"
     type: password
     required: true
