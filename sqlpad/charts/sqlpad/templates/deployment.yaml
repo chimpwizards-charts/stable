@@ -19,8 +19,6 @@ spec:
         app: {{ template "sqlpad.name" . }}
         release: {{ .Release.Name }}
     spec:
-      imagePullSecrets:
-        - name: {{ .Values.global.env_name }}-{{ .Values.global.regsecret }}    
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.name }}:{{ .Values.image.version }}"

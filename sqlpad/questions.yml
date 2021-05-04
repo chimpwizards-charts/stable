@@ -8,17 +8,6 @@ categories:
     - tools
 
 questions:
-- variable: sqlpad.password
-  description: "Server password"
-  type: password
-  required: true
-  group: "Settings" 
-
-- variable: sqlpad.startup_script
-  description: "Startup Script URL"
-  type: string
-  required: false
-  group: "Settings" 
 
 - variable: sqlpad.ingress.enabled
   default: "sqlpad.dev.cw.com"
