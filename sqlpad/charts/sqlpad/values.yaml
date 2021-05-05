@@ -10,7 +10,7 @@ service:
 ingress:
   enabled: true
   hosts:
-    - sqlpad.cw.com
+    - sqlpad.dev.cw.com
   annotations:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
