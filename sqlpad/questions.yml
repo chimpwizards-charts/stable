@@ -9,7 +9,7 @@ categories:
 
 questions:
 
-- variable: sqlpad.ingress.enabled
+- variable: sqlpad.ingress.hosts[0]
   default: "sqlpad.dev.cw.com"
   description: "URL"
   type: string
