@@ -1,4 +1,4 @@
- apiVersion: v1
+apiVersion: v1
 entries:
   sqlpad:
   - apiVersion: v1
