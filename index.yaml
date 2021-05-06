@@ -7,11 +7,11 @@ entries:
     deprecated: false
     description: SQL Pad
     
-    home: https://sqlpad.github.io/sqlpad/#/getting-started
+    home: https://chimpwizards-charts.github.io/stable/sqlpad
     name: sqlpad
     sources:
-    - https://sqlpad.github.io/sqlpad/#/getting-started
+    - https://chimpwizards-charts.github.io/stable/sqlpad
     urls:
-    - https://chimpwizards-charts.github.io/stable/sqlpad/
+    - https://chimpwizards-charts.github.io/stable/sqlpad
     version: 1.0.0
 generated: "2021-05-06T02:00:37.04134827Z"
