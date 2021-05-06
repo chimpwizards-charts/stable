@@ -12,6 +12,6 @@ entries:
     sources:
     - https://chimpwizards-charts.github.io/stable/sqlpad
     urls:
-    - https://chimpwizards-charts.github.io/stable/sqlpad
+    - https://chimpwizards-charts.github.io/stable/sqlpad/.deploy/sqlpad-1.0.39.tgz
     version: 1.0.0
 generated: "2021-05-06T02:00:37.04134827Z"

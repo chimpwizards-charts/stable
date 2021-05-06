@@ -1,0 +1,6 @@
+dependencies:
+- name: sqlpad
+  repository: ""
+  version: 0.1.0
+digest: sha256:ece3512fda96c8cf8a5cf6da244ee192bbd25410db84faf542ec5d6137ca226b
+generated: "2021-05-06T13:55:51.230637111Z"
