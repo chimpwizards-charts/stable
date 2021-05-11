@@ -1,0 +1,19 @@
+{
+  "name": "@chimpwizards/chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.yaml",
+  "scripts": {
+    "package": "helm package vscode -u -d .deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chimpwizards-charts/stable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chimpwizards-charts/stable/issues"
+  },
+  "homepage": "https://github.com/chimpwizards-charts/stable#readme"
+}
