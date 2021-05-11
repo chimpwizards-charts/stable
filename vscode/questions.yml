@@ -5,7 +5,7 @@ categories:
     - code
 
 questions:
-- variable: ide.replicaCount
+- variable: vscode.replicaCount
   default: 1
   description: "Number of replicas you want to instantiate"
   type: int
@@ -14,28 +14,28 @@ questions:
   group: "Global Settings"
 
 
-- variable: ide.password
+- variable: vscode.password
   description: "Server password"
   type: password
   required: true
-  group: "IDE Settings" 
+  group: "Settings" 
 
-- variable: ide.startup_script
+- variable: vscode.startup_script
   description: "Startup Script URL"
   type: string
   required: false
-  group: "IDE Settings" 
+  group: "Settings" 
 
-- variable: ide.ingress.enabled
+- variable: vscode.ingress.enabled
   default: true
   description: "Expose IDS using Layer 7 Load Balancer - ingress"
   type: boolean
   label: Expose IDS using Layer 7 Load Balancer - ingress
   show_subquestion_if: true
-  group: "IDE Settings"
+  group: "Settings"
  
   subquestions:
-  - variable: ide.ingress.hosts[0]
+  - variable: vscode.ingress.hosts[0]
     default: "code.dev.cw.com"
     description: "layer 7 Load Balancer hostname"
     type: string
