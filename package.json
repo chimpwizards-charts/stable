@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.yaml",
   "scripts": {
-    "package": "helm package vscode -u -d .deploy"
+    "package": "ls -l | grep '^d'|awk '{system(\"helm package \"$9\" -u -d .deploy\")}'"
   },
   "repository": {
     "type": "git",
