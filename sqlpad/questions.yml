@@ -19,11 +19,11 @@ questions:
 
 - variable: sqlpad.define.enviornment
   default: true
-  description: "Environment Settings"
+  description: "Settings"
   type: boolean
   label: Define set of environment varibales
   show_subquestion_if: true
-  group: "Environment Settings"
+  group: "Settings"
  
   subquestions:
   - variable: sqlpad.env.username
