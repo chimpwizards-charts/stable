@@ -1,0 +1,14 @@
+global:
+  replicaCount: 1
+
+ide:
+  ingress:
+    enabled: true
+    hosts:
+      - code.dev.cw.com
+    tls:
+      # Secrets must be manually created in the namespace.
+      # - secretName: chart-example-tls
+      #   hosts:
+      #     - chart-example.local
+      - secretName: wildcard-dev-cw-com 

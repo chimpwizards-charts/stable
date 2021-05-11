@@ -1,0 +1,43 @@
+labels:
+    io.cattle.role: project # options are cluster/project
+categories:
+    - chimnpwizards
+    - code
+
+questions:
+- variable: ide.replicaCount
+  default: 1
+  description: "Number of replicas you want to instantiate"
+  type: int
+  required: true
+  label: Number of replicas
+  group: "Global Settings"
+
+
+- variable: ide.password
+  description: "Server password"
+  type: password
+  required: true
+  group: "IDE Settings" 
+
+- variable: ide.startup_script
+  description: "Startup Script URL"
+  type: string
+  required: false
+  group: "IDE Settings" 
+
+- variable: ide.ingress.enabled
+  default: true
+  description: "Expose IDS using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose IDS using Layer 7 Load Balancer - ingress
+  show_subquestion_if: true
+  group: "IDE Settings"
+ 
+  subquestions:
+  - variable: ide.ingress.hosts[0]
+    default: "code.dev.cw.com"
+    description: "layer 7 Load Balancer hostname"
+    type: string
+    required: true
+    label: Layer 7 Load Balancer Hostname

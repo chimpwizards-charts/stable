@@ -1,0 +1,11 @@
+_*/**
+node_modules
+.vscode
+.npmrc
+components/**
+dist
+.npmrc
+package-lock.json
+PRIVATE.md
+index.yaml
+charts/**.tgz

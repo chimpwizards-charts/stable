@@ -1,0 +1,19 @@
+apiVersion: v1
+appVersion: 1.0.0
+description: null
+name: vscode
+version: 1.0.39
+keywords:
+  - cw
+  - coding
+  - tools
+home: >-
+  https://github.com/chimpwizards-tools/vscode-server
+icon: 'https://avatars1.githubusercontent.com/u/25044327?s=200&v=4'
+maintainers:
+  - name: Chimpwizards
+    email: ndru@chimpwizard.com
+    url: https://github.com/chimpwizards-tools/vscode-server
+dependencies:
+  - name: vscode
+    version: 0.1.0

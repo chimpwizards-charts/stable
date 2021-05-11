@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+ 
+    "replicaCount": {
+      "type": "integer",
+      "title": "Replicas",
+      "form": true,
+      "render": "slider",
+      "sliderMin": 1,
+      "sliderMax": 100,
+      "sliderUnit": ""
+    }
+
+  }
+}
+

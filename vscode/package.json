@@ -1,0 +1,30 @@
+{
+  "name": "@chimpwizards/code",
+  "version": "1.0.39",
+  "description": "",
+  "scripts": {
+    "build": "helm dependency update && helm package . -d ./dist",
+    "bump": "npm version patch",
+    "index": "helm repo index .",
+    "list": "helm repo update; helm search repo --regexp cw/*",
+    "test": "helm template .",
+    "pull": "helm dependency update",
+    "install-server": "helm repo update; helm install cw/vscode --namespace demo --generate-name",
+    "install-local": "helm delete demo -n demo; helm install demo . --namespace demo; helm list --all-namespaces; kubectl get pods,services --all-namespaces",
+    "all": "npm run build; npm run publish; npm run list"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm --no-git-tag-version version patch; node -e 'var yaml=require(\"js-yaml\"); var fs=require(\"fs\");json=require(\"./package.json\");var chart=yaml.safeLoad(fs.readFileSync(\"./Chart.yaml\"));chart.version=json.version;fs.writeFileSync(\"./Chart.yaml\",yaml.safeDump(chart))'",
+      "pre-push": ""
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "js-yaml": "^3.13.1"
+  }
+}
