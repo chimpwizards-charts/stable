@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "mongo-express.fullname" . }}
+  labels:
+    app: {{ template "mongo-express.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "mongo-express.name" . }}
+      release: {{ .Release.Name }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ template "mongo-express.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.name }}:{{ .Values.image.version }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.internalPort }}
+          env: 
+            - name: ME_CONFIG_BASICAUTH_USERNAME
+              value: "{{ .Values.env.username }}"          
+            - name: ME_CONFIG_BASICAUTH_PASSWORD
+              value: "{{ .Values.env.password }}"       
+            - name: ME_CONFIG_MONGODB_ENABLE_ADMIN
+              value: 'true'
+            - name: ME_CONFIG_MONGODB_URL
+              value: "{{ .Values.env.db.connection }}"  
+            - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+              value: "{{ .Values.env.db.username }}"   
+            - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+              value: "{{ .Values.env.db.password }}"      
+              
+      
+
+

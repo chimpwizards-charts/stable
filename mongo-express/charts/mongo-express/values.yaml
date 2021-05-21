@@ -1,0 +1,29 @@
+image:
+  name: mongo-express
+  version: latest
+  pullPolicy: IfNotPresent
+
+service:
+  externalPort: 3000
+  internalPort: 8081
+
+ingress:
+  enabled: true
+  hosts:
+    - mongo-express.dev.cw.com
+  annotations:
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  tls:
+    # Secrets must be manually created in the namespace.
+    # - secretName: chart-example-tls
+    #   hosts:
+    #     - chart-example.local
+
+env:
+  password: admin
+  username: admin
+  db:
+    password: admin
+    username: admin  
+    connection: mongodb://admin:admin@mongo:27017/db?ssl=false
