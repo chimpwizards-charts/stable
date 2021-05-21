@@ -1,0 +1,11 @@
+mongo-express:
+  ingress:
+    enabled: true
+    hosts:
+      - mongo-express.dev.cw.com
+    tls:
+      - secretName: dev-cw-com-wildcard-cert
+
+  env:
+    password: admin
+    username: admin      
