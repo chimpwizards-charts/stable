@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "mongo-express.fullname" . }}
+  name: {{ template "mongoexpress.fullname" . }}
   labels:
-    app: {{ template "mongo-express.name" . }}
+    app: {{ template "mongoexpress.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   selector:
     matchLabels:
-      app: {{ template "mongo-express.name" . }}
+      app: {{ template "mongoexpress.name" . }}
       release: {{ .Release.Name }}
   replicas: 1
   template:
     metadata:
       labels:
-        app: {{ template "mongo-express.name" . }}
+        app: {{ template "mongoexpress.name" . }}
         release: {{ .Release.Name }}
     spec:
       containers:

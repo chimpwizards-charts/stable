@@ -1,12 +1,12 @@
 {{- if .Values.ingress.enabled -}}
-{{- $serviceName := include "mongo-express.fullname" . -}}
+{{- $serviceName := include "mongoexpress.fullname" . -}}
 {{- $servicePort := .Values.service.externalPort -}}
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: {{ template "mongo-express.fullname" . }}
+  name: {{ template "mongoexpress.fullname" . }}
   labels:
-    app: {{ template "mongo-express.name" . }}
+    app: {{ template "mongoexpress.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
